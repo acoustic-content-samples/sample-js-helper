@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Simple sample calling Watson Content Hub APIs from JS in a modern browser</title>
+    <script src="wchhelper.js"></script>
+</head>
+<body>
+
+  <h2>Simple sample calling Watson Content Hub APIs from JS in a modern browser</h2>
+
+  <ul>
+    <li>You must set the API URL specific to your tenant, in the options passed to the wchhelper.</li>
+    <li>You must also pass the username and password for a valid WCH tenant user, for login, to use the authenticated portion of this sample.</li>
+    <li>Check your browser debugger for more information if confirmation dialogs do not appear, or appear with errors instead of response data.</li>
+  </ul>
+
+  <script type="text/javascript">
+
+    // Replace the URL below with the API URL from the Hub Information dialog in the WCH Authoring UI
+    options = {
+        url:"https://my11.digitalexperience.ibm.com/api/00000000-1111-2222-3333-444444444444",
+        debug: true
+    };
+    wchHelper = new WchHelper(options);
+
+    // For the "Authoring" API calls below, replace the username and password values with your own.
+    // In a real application, these would come from user input
+    const username = 'myusername@mycompany.com';
+    const password = 'mypassword';
+
+    // Content id of an article from https://github.com/ibm-wch/sample-article-content
+    let contentId = 'e07214a8-373c-40c1-9898-b4de31b2cfee';
+    wchHelper.getDeliveryContentById(contentId)
+        .then(content => { confirm("Delivery Content response: " + JSON.stringify(content, null, ' ')) })
+        .catch(err =>    { confirm("getDeliveryContentById encountered an error: " + err); });
+
+    wchHelper.login(username, password)
+        .then(tenantId => wchHelper.getAuthoringContentById(contentId))
+        .then(acontent => { confirm("Authoring Content response: " + JSON.stringify(acontent, null, ' ')) })
+        .catch(err =>     { confirm("getAuthoringContentById encountered an error: " + err); });
+
+    // Simple all-content query, returning name, document, id, classification, type and status fields
+    let queryParams="q=*:*&fl=name,document,id,classification,type,status&fq=classification:content";
+
+    // Search the delivery system (published ready content and assets) with the above specified query params
+    wchHelper.searchDelivery(queryParams)
+        .then(response => { confirm("Delivery Search response: " + JSON.stringify(response, null, ' ')) })
+        .catch(err =>    { confirm("searchDelivery encountered an error: " + err); });
+
+    // Search the authoring services with the above specified query params
+    wchHelper.login(username, password)
+        .then(tenantId => wchHelper.searchAuthoring(queryParams))
+        .then(response => { confirm("Authoring Search response: " + JSON.stringify(response, null, ' ')) })
+        .catch(err =>     { confirm("searchAuthoring encountered an error: " + err); });
+
+  </script>
+
+</body>
+</html>
