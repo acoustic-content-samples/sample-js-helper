@@ -2,7 +2,7 @@
 Sample Watson Content Hub JS helper providing simple instantiation and method calls against WCH APIs.
 
 ### Overview
-Watson Content Hub provides a set of [REST based APIs](https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API#doc) that may be called from standard browser based xmlHttpRequest (xhr) support, or from your JS framework of choice.   The sample wchHelper.js provided here illustrates an example of one possible means of calling these APIs.  This sample helper is available to help get new WCH developers going quickly, but is not intended to imply that this is the only or even necessarily the best way to call such APIs.  You are free to choose the framework(s) and REST consumption mechanism that best suits your application requirements and developers' expertise.   The full set of public APIs is listed in the API explorer referred to above, while this sample helper currently provides only a subset of convenience methods to help you get started calling commonly used WCH APIs from modern browsers.
+Watson Content Hub provides a set of [REST based APIs](https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API#doc) that may be called from standard browser based xmlHttpRequest (xhr) support, or from your JS framework of choice.   The sample wchhelper.js provided here illustrates an example of one possible means of calling these APIs.  This sample helper is available to help get new WCH developers going quickly, but is not intended to imply that this is the only or even necessarily the best way to call such APIs.  You are free to choose the framework(s) and REST consumption mechanism that best suits your application requirements and developers' expertise.   The full set of public APIs is listed in the API explorer referred to above, while this sample helper currently provides only a subset of convenience methods to help you get started calling commonly used WCH APIs from modern browsers.
 
 
 ### Tenant Base URL for WCH API Calls
@@ -32,7 +32,7 @@ Once you know the id of a specific content item that you want to retrieve, calli
 
 The sample WCH API helper provided here illustrates the above use cases in a straightforward minimalist manner.  For production applications, you would include support for all endpoints required by the application, use the JS framework of choice for your development organization and applications, and provide additional error handling based on the framework chosen.
 
-ownload the sample wchhelper.js to your local web application project (eg, as js/wchhelper.js ) and load it with
+Download the sample wchhelper.js to your local web application project (eg, as js/wchhelper.js ) and load it with
 
 `<script src="js/wchhelper.js">`
 
