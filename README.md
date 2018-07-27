@@ -8,7 +8,7 @@ Watson Content Hub provides a set of [REST based APIs](https://developer.ibm.com
 ### Tenant Base URL for WCH API Calls
 You must know your tenant base URL prior to trying this sample, as is the case with all of the Getting Started Tutorials and usage of the WCH APIs.   For more info on obtaining base API URL specific to your Watson Content Hub tenant, see the following Watson Content Hub API documentation https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API
 
-The API URL is also available in the "Hub Information" dialog, under the User dropdown menu, in the Watson Content Hub authoring UI.
+The API URL is also available in the "Hub Information" dialog, from the "About" flyout menu of the left navigation pane, in the Watson Content Hub authoring UI.
 
 E.g.,
 ```
