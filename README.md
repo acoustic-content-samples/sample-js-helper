@@ -1,5 +1,5 @@
 # sample-js-helper
-Sample Watson Content Hub JS helper providing simple instantiation and method calls against WCH APIs.
+Sample Acoustic Content (formerly Watson Content Hub or WCH) JS helper providing simple instantiation and method calls against Acoustic Content APIs.
 
 ### Overview
 Watson Content Hub provides a set of [REST based APIs](https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API#doc) that may be called from standard browser based xmlHttpRequest (xhr) support, or from your JS framework of choice.   The sample wchhelper.js provided here illustrates an example of one possible means of calling these APIs.  This sample helper is available to help get new WCH developers going quickly, but is not intended to imply that this is the only or even necessarily the best way to call such APIs.  You are free to choose the framework(s) and REST consumption mechanism that best suits your application requirements and developers' expertise.   The full set of public APIs is listed in the API explorer referred to above, while this sample helper currently provides only a subset of convenience methods to help you get started calling commonly used WCH APIs from modern browsers.
