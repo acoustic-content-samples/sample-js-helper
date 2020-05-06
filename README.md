@@ -6,21 +6,21 @@ Watson Content Hub provides a set of [REST based APIs](https://developer.goacous
 
 
 ### Tenant Base URL for WCH API Calls
-You must know your tenant base URL prior to trying this sample, as is the case with all of the Getting Started Tutorials and usage of the WCH APIs.   For more info on obtaining base API URL specific to your Watson Content Hub tenant, see the following Watson Content Hub API documentation https://developer.goacoustic.com/acoustic-content/reference
+You must know your tenant base URL prior to trying this sample, as is the case with all of the Getting Started Tutorials and usage of the WCH APIs.   For more info on obtaining base API URL specific to your Acoustic Content tenant, see the following Acoustic Content API documentation https://developer.goacoustic.com/acoustic-content/reference
 
-The API URL is also available in the "Hub Information" dialog, from the "About" flyout menu of the left navigation pane, in the Watson Content Hub authoring UI.
+The API URL is also available in the "Hub Information" dialog, from the "About" flyout menu of the left navigation pane, in the Acoustic Content authoring UI.
 
 E.g.,
 ```
 const wchTenantBaseAPIURL = https://{tenant-host}/api/{tenant-id}
 ```
 
-### Watson Content Hub REST API URLs
+### Acoustic Content REST API URLs
 
 The format of the WCH REST API URLs is:
   {WCH Tenant Base API URL}/{WCH API Endpoint}
 
-where the endpoints are described in the [Watson Content Hub API documentation](https://developer.goacoustic.com/acoustic-content/reference),  such as "/delivery/v1/content/{content item id}" for accessing published content from the content delivery service or "/authoring/v1/content/{content item id}" for accessing content items directly from the authoring service.   Delivery APIs are available to anonymous, unauthenticated callers, where authoring APIs require authenticating (logging in) to Watson Content Hub via the "/login/v1/basicauth" endpoint first.
+where the endpoints are described in the [Acoustic Content API documentation](https://developer.goacoustic.com/acoustic-content/reference),  such as "/delivery/v1/content/{content item id}" for accessing published content from the content delivery service or "/authoring/v1/content/{content item id}" for accessing content items directly from the authoring service.   Delivery APIs are available to anonymous, unauthenticated callers, where authoring APIs require authenticating (logging in) to Acoustic Content via the "/login/v1/basicauth" endpoint first.
 
 ### Retrieving a published content item by id
 
@@ -60,7 +60,7 @@ Then use the helper make a call to retrieve and display the JSON response for a 
 
 ### Logging in and retrieving authoring content by id
 
-Before calling an authoring API, you must first login to Watson Content Hub using the "/login/v1/basicauth" REST API and then call the individual authoring APIs.  Authoring APIs require that you are authenticated as a user with an Editor role or higher (Manager or Admin) and will not work with users associated with the Viewer role.
+Before calling an authoring API, you must first login to Acoustic Content using the "/login/v1/basicauth" REST API and then call the individual authoring APIs.  Authoring APIs require that you are authenticated as a user with an Editor role or higher (Manager or Admin) and will not work with users associated with the Viewer role.
 
 For example:
 
