@@ -2,11 +2,11 @@
 Sample Acoustic Content (formerly Watson Content Hub or WCH) JS helper providing simple instantiation and method calls against Acoustic Content APIs.
 
 ### Overview
-Watson Content Hub provides a set of [REST based APIs](https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API#doc) that may be called from standard browser based xmlHttpRequest (xhr) support, or from your JS framework of choice.   The sample wchhelper.js provided here illustrates an example of one possible means of calling these APIs.  This sample helper is available to help get new WCH developers going quickly, but is not intended to imply that this is the only or even necessarily the best way to call such APIs.  You are free to choose the framework(s) and REST consumption mechanism that best suits your application requirements and developers' expertise.   The full set of public APIs is listed in the API explorer referred to above, while this sample helper currently provides only a subset of convenience methods to help you get started calling commonly used WCH APIs from modern browsers.
+Watson Content Hub provides a set of [REST based APIs](https://developer.goacoustic.com/acoustic-content/reference) that may be called from standard browser based xmlHttpRequest (xhr) support, or from your JS framework of choice.   The sample wchhelper.js provided here illustrates an example of one possible means of calling these APIs.  This sample helper is available to help get new WCH developers going quickly, but is not intended to imply that this is the only or even necessarily the best way to call such APIs.  You are free to choose the framework(s) and REST consumption mechanism that best suits your application requirements and developers' expertise.   The full set of public APIs is listed in the API explorer referred to above, while this sample helper currently provides only a subset of convenience methods to help you get started calling commonly used WCH APIs from modern browsers.
 
 
 ### Tenant Base URL for WCH API Calls
-You must know your tenant base URL prior to trying this sample, as is the case with all of the Getting Started Tutorials and usage of the WCH APIs.   For more info on obtaining base API URL specific to your Watson Content Hub tenant, see the following Watson Content Hub API documentation https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API
+You must know your tenant base URL prior to trying this sample, as is the case with all of the Getting Started Tutorials and usage of the WCH APIs.   For more info on obtaining base API URL specific to your Watson Content Hub tenant, see the following Watson Content Hub API documentation https://developer.goacoustic.com/acoustic-content/reference
 
 The API URL is also available in the "Hub Information" dialog, from the "About" flyout menu of the left navigation pane, in the Watson Content Hub authoring UI.
 
@@ -20,7 +20,7 @@ const wchTenantBaseAPIURL = https://{tenant-host}/api/{tenant-id}
 The format of the WCH REST API URLs is:
   {WCH Tenant Base API URL}/{WCH API Endpoint}
 
-where the endpoints are described in the [Watson Content Hub API documentation](https://developer.ibm.com/api/view/id-618:title-IBM_Watson_Content_Hub_API#doc),  such as "/delivery/v1/content/{content item id}" for accessing published content from the content delivery service or "/authoring/v1/content/{content item id}" for accessing content items directly from the authoring service.   Delivery APIs are available to anonymous, unauthenticated callers, where authoring APIs require authenticating (logging in) to Watson Content Hub via the "/login/v1/basicauth" endpoint first.
+where the endpoints are described in the [Watson Content Hub API documentation](https://developer.goacoustic.com/acoustic-content/reference),  such as "/delivery/v1/content/{content item id}" for accessing published content from the content delivery service or "/authoring/v1/content/{content item id}" for accessing content items directly from the authoring service.   Delivery APIs are available to anonymous, unauthenticated callers, where authoring APIs require authenticating (logging in) to Watson Content Hub via the "/login/v1/basicauth" endpoint first.
 
 ### Retrieving a published content item by id
 
