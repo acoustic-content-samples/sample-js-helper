@@ -45,7 +45,7 @@ The JS in the sample WCH API helper can be used for simple retrieval of a known 
 Construct an instance of the sample helper with the tenant specific base API URL like this:
 
     options = {
-        url: "https://my11.digitalexperience.ibm.com/api/00000000-1111-2222-3333-444444444444",
+        url: "https://content-eu-3.content-cms.com/api/00000000-1111-2222-3333-444444444444",
         debug: true
     };
     wchHelper = new WchHelper(options);
@@ -67,7 +67,7 @@ For example:
 Construct the sample helper with the tenant specific base URL in the same way as the above sample, like this:
 
     options = {
-        url: "https://my11.digitalexperience.ibm.com/api/00000000-1111-2222-3333-444444444444",
+        url: "https://content-eu-3.content-cms.com/api/00000000-1111-2222-3333-444444444444",
         debug: true
     };
     wchHelper = new WchHelper(options);
